@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "bf198a4f-cff1-441d-abee-626b7541e905",
+		"name": "InventoryApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18565174"
+	},
+	"item": [
+		{
+			"name": "userRegister",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"B Solanke\",\r\n    \"email\":\"bSolanke@gmail.com\",\r\n    \"mobile_no\":\"9890319604\",\r\n    \"date_of_birth\":\"1995-06-15\",\r\n    \"address\":\"Pune\",\r\n    \"gender\":\"m\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/userRegister",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"userRegister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginWithOtp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile_no\":\"9890319604\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/loginWithOtp",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"loginWithOtp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verifyOtp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"otp\":\"123456\",\r\n    \"mobile_no\":\"9890319604\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/verifyOtp",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"verifyOtp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBusiness",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTRhNWE5ZjJhNzA1MTEyYjhjNmFiYjM4NzQyMmQwNDgzNzJmZjdjZDgwMDk1NWY5ZjQzNzI2YjVmMzE1Y2MzNjcwNmZlMWMxMWI1ZDQyMWMiLCJpYXQiOjE2ODA1NDYyNjguMTE0NzA4LCJuYmYiOjE2ODA1NDYyNjguMTE0NzE2LCJleHAiOjE3MTIxNjg2NjguMDg4NDc5LCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.wjymlxfYSBpQ0j9NdMPsnbm3dDlzjJcBqciU2JLypXGmCIoJT93TTcGhsS4BFOKm2dx3kOYCNWCHn1jrxdhCbhkEYtIHVRdA9a3D2SRAed_xSPOhxIFD2PJp4yNw84XSSGk-kBsS7mLrHbcIClMS3rmbdn9FjzKrw2dcst9c95LOWP38lDVNE9h9l0juwkxJ09gqYFCP7Mgws9hvl010SXJbBFLhstm8ECmRVR0UGYzI6ch_3CyY-0cbPQFCH6QUu6NqRU3I1u1YgXr5bykiMLYOYGEfJw2KCMxuYCJDCIbjzLvFzpu2aTbqFLCBKPhrsFj6YeZGvYjHkvMFCsiPB3lqNfNWlLOJgSUtlA7S92b-_E72k2q2T_4_fc8_CbwCps68fWkGCEnCyp3G2y9g8oyqoiZ3BMLEVO49N43RR0yD52QKYu4qn7D9_kLZJDUXv3sNSX96WB4HSCR8mX6y1N_S7Z4YRKpv0oQblOYH6EL5ey8FD8v_APrOPldEEUw-k6v8JrmFqL-XeZ814tbf5uydzogaXbSqVMtjYojdyHuf-lQ_wLVLm79jCwGhGMZsYWcxJhk9tmioVkcmvyqTtqxqa3C2zM970h8Jfppl-V2zi5Cd7B63TyLsmYBdq4YV6BiUDWhTVT0OVhFUyQs4MwpBABuuLjElOPxykjLt3RA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ganesh cake shop\",\r\n    \"city\": \"Pune\",\r\n    \"state\": \"Maharashtra\",\r\n    \"landmark\": \"Pune\",\r\n    \"category\": \"cake shop\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/addBusiness",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"addBusiness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBusiness",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTRhNWE5ZjJhNzA1MTEyYjhjNmFiYjM4NzQyMmQwNDgzNzJmZjdjZDgwMDk1NWY5ZjQzNzI2YjVmMzE1Y2MzNjcwNmZlMWMxMWI1ZDQyMWMiLCJpYXQiOjE2ODA1NDYyNjguMTE0NzA4LCJuYmYiOjE2ODA1NDYyNjguMTE0NzE2LCJleHAiOjE3MTIxNjg2NjguMDg4NDc5LCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.wjymlxfYSBpQ0j9NdMPsnbm3dDlzjJcBqciU2JLypXGmCIoJT93TTcGhsS4BFOKm2dx3kOYCNWCHn1jrxdhCbhkEYtIHVRdA9a3D2SRAed_xSPOhxIFD2PJp4yNw84XSSGk-kBsS7mLrHbcIClMS3rmbdn9FjzKrw2dcst9c95LOWP38lDVNE9h9l0juwkxJ09gqYFCP7Mgws9hvl010SXJbBFLhstm8ECmRVR0UGYzI6ch_3CyY-0cbPQFCH6QUu6NqRU3I1u1YgXr5bykiMLYOYGEfJw2KCMxuYCJDCIbjzLvFzpu2aTbqFLCBKPhrsFj6YeZGvYjHkvMFCsiPB3lqNfNWlLOJgSUtlA7S92b-_E72k2q2T_4_fc8_CbwCps68fWkGCEnCyp3G2y9g8oyqoiZ3BMLEVO49N43RR0yD52QKYu4qn7D9_kLZJDUXv3sNSX96WB4HSCR8mX6y1N_S7Z4YRKpv0oQblOYH6EL5ey8FD8v_APrOPldEEUw-k6v8JrmFqL-XeZ814tbf5uydzogaXbSqVMtjYojdyHuf-lQ_wLVLm79jCwGhGMZsYWcxJhk9tmioVkcmvyqTtqxqa3C2zM970h8Jfppl-V2zi5Cd7B63TyLsmYBdq4YV6BiUDWhTVT0OVhFUyQs4MwpBABuuLjElOPxykjLt3RA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"business_id\": \"1\",\r\n    \"name\": \"ganesh cake shop1\",\r\n    \"city\": \"Pune2\",\r\n    \"state\": \"Maharashtra3\",\r\n    \"landmark\": \"Pune4\",\r\n    \"category\": \"cake shop5\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/updateBusiness",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"updateBusiness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBusiness",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTRhNWE5ZjJhNzA1MTEyYjhjNmFiYjM4NzQyMmQwNDgzNzJmZjdjZDgwMDk1NWY5ZjQzNzI2YjVmMzE1Y2MzNjcwNmZlMWMxMWI1ZDQyMWMiLCJpYXQiOjE2ODA1NDYyNjguMTE0NzA4LCJuYmYiOjE2ODA1NDYyNjguMTE0NzE2LCJleHAiOjE3MTIxNjg2NjguMDg4NDc5LCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.wjymlxfYSBpQ0j9NdMPsnbm3dDlzjJcBqciU2JLypXGmCIoJT93TTcGhsS4BFOKm2dx3kOYCNWCHn1jrxdhCbhkEYtIHVRdA9a3D2SRAed_xSPOhxIFD2PJp4yNw84XSSGk-kBsS7mLrHbcIClMS3rmbdn9FjzKrw2dcst9c95LOWP38lDVNE9h9l0juwkxJ09gqYFCP7Mgws9hvl010SXJbBFLhstm8ECmRVR0UGYzI6ch_3CyY-0cbPQFCH6QUu6NqRU3I1u1YgXr5bykiMLYOYGEfJw2KCMxuYCJDCIbjzLvFzpu2aTbqFLCBKPhrsFj6YeZGvYjHkvMFCsiPB3lqNfNWlLOJgSUtlA7S92b-_E72k2q2T_4_fc8_CbwCps68fWkGCEnCyp3G2y9g8oyqoiZ3BMLEVO49N43RR0yD52QKYu4qn7D9_kLZJDUXv3sNSX96WB4HSCR8mX6y1N_S7Z4YRKpv0oQblOYH6EL5ey8FD8v_APrOPldEEUw-k6v8JrmFqL-XeZ814tbf5uydzogaXbSqVMtjYojdyHuf-lQ_wLVLm79jCwGhGMZsYWcxJhk9tmioVkcmvyqTtqxqa3C2zM970h8Jfppl-V2zi5Cd7B63TyLsmYBdq4YV6BiUDWhTVT0OVhFUyQs4MwpBABuuLjElOPxykjLt3RA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/getBusiness",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"getBusiness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addSubUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTRhNWE5ZjJhNzA1MTEyYjhjNmFiYjM4NzQyMmQwNDgzNzJmZjdjZDgwMDk1NWY5ZjQzNzI2YjVmMzE1Y2MzNjcwNmZlMWMxMWI1ZDQyMWMiLCJpYXQiOjE2ODA1NDYyNjguMTE0NzA4LCJuYmYiOjE2ODA1NDYyNjguMTE0NzE2LCJleHAiOjE3MTIxNjg2NjguMDg4NDc5LCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.wjymlxfYSBpQ0j9NdMPsnbm3dDlzjJcBqciU2JLypXGmCIoJT93TTcGhsS4BFOKm2dx3kOYCNWCHn1jrxdhCbhkEYtIHVRdA9a3D2SRAed_xSPOhxIFD2PJp4yNw84XSSGk-kBsS7mLrHbcIClMS3rmbdn9FjzKrw2dcst9c95LOWP38lDVNE9h9l0juwkxJ09gqYFCP7Mgws9hvl010SXJbBFLhstm8ECmRVR0UGYzI6ch_3CyY-0cbPQFCH6QUu6NqRU3I1u1YgXr5bykiMLYOYGEfJw2KCMxuYCJDCIbjzLvFzpu2aTbqFLCBKPhrsFj6YeZGvYjHkvMFCsiPB3lqNfNWlLOJgSUtlA7S92b-_E72k2q2T_4_fc8_CbwCps68fWkGCEnCyp3G2y9g8oyqoiZ3BMLEVO49N43RR0yD52QKYu4qn7D9_kLZJDUXv3sNSX96WB4HSCR8mX6y1N_S7Z4YRKpv0oQblOYH6EL5ey8FD8v_APrOPldEEUw-k6v8JrmFqL-XeZ814tbf5uydzogaXbSqVMtjYojdyHuf-lQ_wLVLm79jCwGhGMZsYWcxJhk9tmioVkcmvyqTtqxqa3C2zM970h8Jfppl-V2zi5Cd7B63TyLsmYBdq4YV6BiUDWhTVT0OVhFUyQs4MwpBABuuLjElOPxykjLt3RA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"N Solanke\",\r\n    \"address\": \"Pune\",\r\n    \"age\": \"28\",\r\n    \"role\": \"testq\",\r\n    \"gender\": \"m\",\r\n    \"email\":\"testnSolanke@gmail.com\",\r\n    \"mobile_no\":\"9890319609\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/addSubUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"addSubUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSubUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTRhNWE5ZjJhNzA1MTEyYjhjNmFiYjM4NzQyMmQwNDgzNzJmZjdjZDgwMDk1NWY5ZjQzNzI2YjVmMzE1Y2MzNjcwNmZlMWMxMWI1ZDQyMWMiLCJpYXQiOjE2ODA1NDYyNjguMTE0NzA4LCJuYmYiOjE2ODA1NDYyNjguMTE0NzE2LCJleHAiOjE3MTIxNjg2NjguMDg4NDc5LCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.wjymlxfYSBpQ0j9NdMPsnbm3dDlzjJcBqciU2JLypXGmCIoJT93TTcGhsS4BFOKm2dx3kOYCNWCHn1jrxdhCbhkEYtIHVRdA9a3D2SRAed_xSPOhxIFD2PJp4yNw84XSSGk-kBsS7mLrHbcIClMS3rmbdn9FjzKrw2dcst9c95LOWP38lDVNE9h9l0juwkxJ09gqYFCP7Mgws9hvl010SXJbBFLhstm8ECmRVR0UGYzI6ch_3CyY-0cbPQFCH6QUu6NqRU3I1u1YgXr5bykiMLYOYGEfJw2KCMxuYCJDCIbjzLvFzpu2aTbqFLCBKPhrsFj6YeZGvYjHkvMFCsiPB3lqNfNWlLOJgSUtlA7S92b-_E72k2q2T_4_fc8_CbwCps68fWkGCEnCyp3G2y9g8oyqoiZ3BMLEVO49N43RR0yD52QKYu4qn7D9_kLZJDUXv3sNSX96WB4HSCR8mX6y1N_S7Z4YRKpv0oQblOYH6EL5ey8FD8v_APrOPldEEUw-k6v8JrmFqL-XeZ814tbf5uydzogaXbSqVMtjYojdyHuf-lQ_wLVLm79jCwGhGMZsYWcxJhk9tmioVkcmvyqTtqxqa3C2zM970h8Jfppl-V2zi5Cd7B63TyLsmYBdq4YV6BiUDWhTVT0OVhFUyQs4MwpBABuuLjElOPxykjLt3RA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sub_user_id\": \"10\",\r\n    \"name\": \"Kedar 2\",\r\n    \"address\": \"Pune\",\r\n    \"age\": \"24\",\r\n    \"role\": \"testq\",\r\n    \"gender\": \"m\",\r\n    \"email\":\"bSolanke1@gmail.com\",\r\n    \"mobile_no\":\"9890319204\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/updateSubUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"updateSubUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSubUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTRhNWE5ZjJhNzA1MTEyYjhjNmFiYjM4NzQyMmQwNDgzNzJmZjdjZDgwMDk1NWY5ZjQzNzI2YjVmMzE1Y2MzNjcwNmZlMWMxMWI1ZDQyMWMiLCJpYXQiOjE2ODA1NDYyNjguMTE0NzA4LCJuYmYiOjE2ODA1NDYyNjguMTE0NzE2LCJleHAiOjE3MTIxNjg2NjguMDg4NDc5LCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.wjymlxfYSBpQ0j9NdMPsnbm3dDlzjJcBqciU2JLypXGmCIoJT93TTcGhsS4BFOKm2dx3kOYCNWCHn1jrxdhCbhkEYtIHVRdA9a3D2SRAed_xSPOhxIFD2PJp4yNw84XSSGk-kBsS7mLrHbcIClMS3rmbdn9FjzKrw2dcst9c95LOWP38lDVNE9h9l0juwkxJ09gqYFCP7Mgws9hvl010SXJbBFLhstm8ECmRVR0UGYzI6ch_3CyY-0cbPQFCH6QUu6NqRU3I1u1YgXr5bykiMLYOYGEfJw2KCMxuYCJDCIbjzLvFzpu2aTbqFLCBKPhrsFj6YeZGvYjHkvMFCsiPB3lqNfNWlLOJgSUtlA7S92b-_E72k2q2T_4_fc8_CbwCps68fWkGCEnCyp3G2y9g8oyqoiZ3BMLEVO49N43RR0yD52QKYu4qn7D9_kLZJDUXv3sNSX96WB4HSCR8mX6y1N_S7Z4YRKpv0oQblOYH6EL5ey8FD8v_APrOPldEEUw-k6v8JrmFqL-XeZ814tbf5uydzogaXbSqVMtjYojdyHuf-lQ_wLVLm79jCwGhGMZsYWcxJhk9tmioVkcmvyqTtqxqa3C2zM970h8Jfppl-V2zi5Cd7B63TyLsmYBdq4YV6BiUDWhTVT0OVhFUyQs4MwpBABuuLjElOPxykjLt3RA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/getSubUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"getSubUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activateFreeTrial",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTRhNWE5ZjJhNzA1MTEyYjhjNmFiYjM4NzQyMmQwNDgzNzJmZjdjZDgwMDk1NWY5ZjQzNzI2YjVmMzE1Y2MzNjcwNmZlMWMxMWI1ZDQyMWMiLCJpYXQiOjE2ODA1NDYyNjguMTE0NzA4LCJuYmYiOjE2ODA1NDYyNjguMTE0NzE2LCJleHAiOjE3MTIxNjg2NjguMDg4NDc5LCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.wjymlxfYSBpQ0j9NdMPsnbm3dDlzjJcBqciU2JLypXGmCIoJT93TTcGhsS4BFOKm2dx3kOYCNWCHn1jrxdhCbhkEYtIHVRdA9a3D2SRAed_xSPOhxIFD2PJp4yNw84XSSGk-kBsS7mLrHbcIClMS3rmbdn9FjzKrw2dcst9c95LOWP38lDVNE9h9l0juwkxJ09gqYFCP7Mgws9hvl010SXJbBFLhstm8ECmRVR0UGYzI6ch_3CyY-0cbPQFCH6QUu6NqRU3I1u1YgXr5bykiMLYOYGEfJw2KCMxuYCJDCIbjzLvFzpu2aTbqFLCBKPhrsFj6YeZGvYjHkvMFCsiPB3lqNfNWlLOJgSUtlA7S92b-_E72k2q2T_4_fc8_CbwCps68fWkGCEnCyp3G2y9g8oyqoiZ3BMLEVO49N43RR0yD52QKYu4qn7D9_kLZJDUXv3sNSX96WB4HSCR8mX6y1N_S7Z4YRKpv0oQblOYH6EL5ey8FD8v_APrOPldEEUw-k6v8JrmFqL-XeZ814tbf5uydzogaXbSqVMtjYojdyHuf-lQ_wLVLm79jCwGhGMZsYWcxJhk9tmioVkcmvyqTtqxqa3C2zM970h8Jfppl-V2zi5Cd7B63TyLsmYBdq4YV6BiUDWhTVT0OVhFUyQs4MwpBABuuLjElOPxykjLt3RA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"business_id\":\"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/activateFreeTrial",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"activateFreeTrial"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
