@@ -1,5 +1,5 @@
 import React from "react";
-
+https://bit.ly/2YGcTmG
 apport from max i don't have any term plan. also i don't have deduction and rejected policy. 
 in my from 16 ATC ressen I am have the LIC policy sumshot 4,00,0000 ploicy statsu is avtive.
   
