@@ -28,6 +28,9 @@ AppRegistry.registerComponent("StarterApp", () => StarterApp);
 
 export default StarterApp;
 
+
+https://mobileappcommunicator.auth.microsoft.com/activate/420005094/SEA
+
 01-Aug-2022 - 35925.0
 02-Sep-2022 - 49598.00
 04-Oct-2022 - 49598.00
