@@ -31,6 +31,8 @@ export default StarterApp;
 
 https://mobileappcommunicator.auth.microsoft.com/activate/420005094/SEA
 
+https://play.google.com/store/apps/details?id=com.azure.authenticator&referrer=%20adjust_reftag%3Dc6f1p4ErudH2C%26utm_source%3DLanding%2BPage%2BOrganic%2B-%2Bapp%2Bstore%2Bbadges%26utm_campaign%3Dappstore_android
+
 01-Aug-2022 - 35925.0
 02-Sep-2022 - 49598.00
 04-Oct-2022 - 49598.00
