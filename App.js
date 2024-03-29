@@ -2,3 +2,7 @@ am not able to new claim medical insurance reimbursement for medical when i clic
 
 
 https://apps.randstad.in/ourpeople/
+
+प्रधानमंत्री कुसुम घटक-ब योजनेअंतर्गत सौर कृषिपंप करिता आपल्या अर्जाची माहिती https://kusumbenef.mahadiscom.in/benef_home या लिंकवर लॉगइन करून पूर्ण भरावी. धन्यवाद.महावितरण
+नोंदणी झालेल्या अर्जाची माहिती खालील प्रमाणे,
+Application No.: MS230518432 , Username: MS230518432 , Password: 9139
