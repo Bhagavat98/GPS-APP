@@ -1,0 +1,323 @@
+
+{"status":"success","msg":"","data":{"id":"122260","consumer_no":"585440453927","sub_division_name":null,"bu":"2593","circle_name":null,"circle_code":"617","village_code":"58544","consumer_name":"Rushikesh Haribhau Vagare","address":"Gat NO 283, kshetra 01 he 50 r, Mogra, MANJLEGAON, 431131","consumer_current_status":null,"load_in_hp":"5.0","cast_category":"Open","total_receipt_amount":"11643.00","first_sd_receipt_amt":null,"agreement_fees_receipt_amt":null,"service_connection_chrgs_amt":null,"processing_fees_amt":null,"supervision_charges_amt":null,"goods_service_tax_receipt_amt":"1433.00","ddf_receipt_amt":null,"other_charges_amt":null,"receipt_number":null,"receipt_dt":"20-MAR-2024","mobile":"9834959080","aadhar_no":null,"distance_from_lt_line":"150","distance_from_ht_line":null,"benf_id":null,"otp":null,"is_active":"1","is_delete":"0","added_date":"2024-03-30 17:29:47","rejected_remark":null,"rejected_date":null,"census_code":"559365","updated_status_msedcl":"0","updated_status_msedcl_date":null,"updated_status_msedcl_desc":null,"is_watersheds":0,"village":[],"taluka":[],"district":[],"districts":[{"id":"15","name":"Ahmednagar"},{"id":"16","name":"Akola"},{"id":"2","name":"Amravati"},{"id":"17","name":"Beed"},{"id":"18","name":"Bhandara"},{"id":"19","name":"Buldhana"},{"id":"20","name":"Chandrapur"},{"id":"9","name":"Chhatrapati Sambhajinagar"},{"id":"29","name":"Dharashiv"},{"id":"10","name":"Dhule"},{"id":"1","name":"Gadchiroli"},{"id":"21","name":"Gondia"},{"id":"22","name":"Hingoli"},{"id":"23","name":"Jalgaon"},{"id":"24","name":"Jalna"},{"id":"25","name":"Kolhapur"},{"id":"26","name":"Latur"},{"id":"14","name":"Mumbai"},{"id":"41","name":"Mumbai Suburban"},{"id":"28","name":"Nagpur"},{"id":"27","name":"Nanded"},{"id":"3","name":"Nandurbar"},{"id":"11","name":"Nashik"},{"id":"36","name":"Palghar"},{"id":"30","name":"Parbhani"},{"id":"4","name":"Pune"},{"id":"31","name":"Raigad"},{"id":"6","name":"Ratnagiri"},{"id":"40","name":"Sangli"},{"id":"38","name":"Satara"},{"id":"32","name":"Sindhudurg"},{"id":"33","name":"Solapur"},{"id":"7","name":"Thane"},{"id":"34","name":"Wardha"},{"id":"35","name":"Washim"},{"id":"8","name":"Yavatmal"}]}}
+
+
+<form class="form-material beneficiary-form pt-2" id="frmBeneficiary" name="frmBeneficiary" method="POST" enctype="multipart/form-data" autocomplete="off" novalidate="novalidate" data-gtm-form-interact-id="0">
+            <div class="row">
+                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex ">
+                  
+                    <div class="col-sm-8 col-md-8 pt-3">
+                        <input type="hidden" name="csrf_token" value="3d19978f-1f1c-4a8d-99ce-f59629c51b85">
+                        <h3 class="benf_titile"><label>तुम्ही पैसे भरून प्रलंबित ग्राहक आहात का? </label><span style="color:red">*</span></h3>
+                        <div class="col-sm-12 col-md-12 d-flex p-0">
+                            <div class="col-sm-1 col-md-1 p-0">
+                                <label for="yes" class="radio-inline">
+                                <input type="radio" class=" paidpaycustomer mx-1" name="paidpaycustomer" id="yes" value="yes" data-gtm-form-interact-field-id="0">Yes</label>
+                            </div>
+                            <div class="col-sm-2 col-md-2">
+                                <label for="no" class="radio-inline">
+                                    <input type="radio" class="mx-1 paidpaycustomer" name="paidpaycustomer" id="no" value="no"><label for="no">No</label>
+                            </label></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="consumerdiv" style="display: block;">
+                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex ">
+                    
+                    <div class="col-sm-4 col-md-4">
+                        <label for="consumer_no">ग्राहक क्रमांक प्रविष्ट करा</label><span style="color:red">*</span>
+                        <input type="text" class="form-control num valid" name="consumer_no" id="consumer_no" value="" minlength="10" maxlength="14" placeholder="ग्राहक क्रमांक प्रविष्ट करा" required="" aria-required="true" data-gtm-form-interact-field-id="1" aria-invalid="false">
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <button type="button" id="app_search_btn" class="btn btn-submit mt-4" style="display: none;">शोधा</button>
+                    </div>
+                    
+                </div>
+            </div>
+          
+            <div class="row pt-5 consumerdatadiv" id="consumerdatadiv" style="display: flex;">
+
+
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12 col-12 row">
+                    <div class="col-md-6 col-sm-6 col-lg-4 col-xl-3 form-group mb-2 is_ext_user">
+                        <label>सध्या तुम्ही डिझेल पंप वापरत आहात का ?<span style="color:red">*</span></label>
+                         <select name="is_ext_user" id="is_ext_user" required="" class="form-control form-control-line valid" placeholder="Is Existing Diesel Pump User" aria-required="true" data-gtm-form-interact-field-id="0" aria-invalid="false"><option value="">--Select Option--</option><option value="Yes">Yes (होय)</option><option value="No">No (नाही)</option></select>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4 col-xl-3 form-group mb-2 ext_src_pow d_ext_src_pow" style="display:none">
+                        <label>सध्याच्या पंपचा उर्जा स्रोत<span style="color:red">*</span></label>
+                         <select name="ext_src_pow" id="ext_src_pow" class="form-control form-control-line disable_inp valid" placeholder="Source of Power Existing Pump " data-gtm-form-interact-field-id="1" aria-invalid="false" required="" disabled="disabled" aria-required="true">
+                            <option value="">--Select Option--</option>
+                            <option value="Diesel">Diesel (डिझेल)</option>
+                        </select>
+                        <input type="hidden" id="pmp_undrtking" name="pmp_undrtking">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4 col-xl-3 form-group mb-2 ext_pmp_typ d_ext_pmp_typ" style="display:none">
+                        <label>सध्याचा पंप प्रकार</label>
+                        <select name="ext_pmp_typ" id="ext_pmp_typ" class="form-control form-control-line disable_inp" placeholder="Existing Pump Type" disabled="disabled"><option value="">--Select Option--</option><option value="AC">AC (एसी)</option></select>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4 col-xl-3 form-group mb-2 ext_pmp_sbtyp d_ext_pmp_sbtyp" style="display:none">
+                        <label>सध्याचा पंप उप प्रकार</label>
+                        <select name="ext_pmp_sbtyp" id="ext_pmp_sbtyp" class="form-control form-control-line disable_inp" placeholder="Existing Pump Sub Type" disabled="disabled"><option value="">--Select Option--</option><option value="Surface">Surface (जमिनीवरील)</option></select>
+                        
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4 col-xl-3 form-group mb-2 ext_pmp_cp d_ext_pmp_cp" style="display:none">
+                        <label>एचपी मध्ये सध्याची पंप क्षमता</label>
+                         <select name="ext_pmp_cp" id="ext_pmp_cp" class="form-control form-control-line disable_inp" placeholder="Existing Pump Capacity in HP" disabled="disabled"><option value="">--Select Option--</option><option value="3">3 (तीन)</option><option value="5">5 (पाच)</option><option value="7.5">7.5 (साडेसात)</option></select>
+                        
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4 col-xl-3 form-group mb-2 ext_eff_pmp d_ext_eff_pmp" style="display:none">
+                        <label>ऊर्जा कार्यक्षम पंप</label>
+                         <select name="ext_eff_pmp" id="ext_eff_pmp" class="form-control form-control-line disable_inp" placeholder="Energy Efficient Pump" disabled="disabled"><option value="">--Select Option--</option><option value="Yes">Yes (होय)</option><option value="No">No (नाही)</option></select>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4 col-xl-3 form-group mb-2 ext_anu_dsl d_ext_anu_dsl" style="display:  none; ">
+                        <label> वार्षिक डिझेलची आवश्यकता लिटरमध्ये</label>
+                        <input type="text" id="ext_anu_dsl" name="ext_anu_dsl" class="form-control form-control-line disable_inp num " placeholder="Annual Diesel Requirement in Litres" value="" maxlength="5" disabled="disabled">                                       
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="sub_division_name">उपविभागाचे नाव</label>
+                    <input type="text" class="form-control" name="sub_division_name" id="sub_division_name" value="" placeholder=" उपविभागाचे नाव" readonly="">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="bu">बिलिंग युनिट</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="bu" id="bu" value="" placeholder="बिलिंग युनिट" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="circle_name">मंडळ कार्यालयाचे नाव</label>
+                    <input type="text" class="form-control" name="circle_name" id="circle_name" value="" placeholder="मंडळ कार्यालयाचे नाव" readonly="">
+                    <input type="hidden" name="circle_id" id="circle_id" value="617">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="village_code">विलेज कोड</label><span style="color:red">*</span>
+                    <input type="text" class="form-control valid" name="village_code" id="village_code" value="" placeholder="विलेज कोड" required="" readonly="" aria-required="true" aria-invalid="false">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="consumer_name">लाभार्थ्याचे नाव</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="consumer_name" id="consumer_name" value="" placeholder="लाभार्थ्याचे नाव" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="address">पत्ता</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="address" id="address" value="" placeholder="पत्ता" required="" readonly="" aria-required="true">
+                </div>
+
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="load_in_hp">पंप क्षमता अश्वशक्ती मध्ये</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="load_in_hp" id="load_in_hp" value="" placeholder="पंप क्षमता अश्वशक्ती मध्ये" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="total_receipt_amount">भरणा केलेली रक्कम</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="total_receipt_amount" id="total_receipt_amount" value="" placeholder="भरणा केलेली रक्कम" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="receipt_number">पावती क्रमांक</label>
+                    <input type="text" class="form-control" name="receipt_number" id="receipt_number" value="" placeholder="पावती क्रमांक" readonly="">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="receipt_dt">पावती दिनांक</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="receipt_dt" id="receipt_dt" value="" placeholder="पावती दिनांक" required="" readonly="" aria-required="true">
+                </div>
+
+                
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label>जात वर्गवारी<span style="color:red">*</span> </label>
+                    <select name="cast_category" id="cast_category" required="" class="form-control form-control-line " placeholder="Caste Category" aria-required="true">
+                            <option value="">--Select Option--</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                            <option value="Open">Open</option>
+                        </select>     
+                    <!-- <input type="text" class ="form-control" name="cast_category" id ="cast_category" value="" placeholder="जात वर्गवारी" readonly required/>                            -->
+                </div>
+
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="aadhar_no1">आधार कार्ड क्रमांक</label>
+                    <input type="text" class="form-control" name="aadhar_no1" id="aadhar_no1" value="" placeholder="आधार कार्ड क्रमांक" readonly="">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="distance_from_lt_line">एलटी लाइनपासून अंतर</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="distance_from_lt_line" id="distance_from_lt_line" value="" placeholder="एलटी लाइनपासून अंतर" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="distance_from_ht_line">एचटी लाइनपासून अंतर</label>
+                    <input type="text" class="form-control" name="distance_from_ht_line" id="distance_from_ht_line" value="" placeholder="एचटी लाइनपासून अंतर" readonly="">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="mobile">भ्रमणध्वनी क्रमांक</label><span style="color:red">*</span>
+                    <input type="text" class="form-control num" name="mobile" id="mobile" minlength="10" maxlength="10" value="" placeholder="भ्रमणध्वनी क्रमांक" oncopy="return false" ondrag="return false" ondrop="return false" onpaste="return false" autocomplete="off" required="" aria-required="true">
+                </div>
+
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <button type="button" id="confirm_btn" class="btn btn-submit mt-4">OTP पाठवा</button>
+                </div>
+            </div>
+
+            <div class="row pt-3 col-sm-12 col-md-12 col-xl-12 col-lg-12 confirmotpdiv">
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="otp">ओ. टी. पी.</label><span style="color:red">*</span>
+                    <input type="text" class="form-control num" minlength="6" maxlength="6" name="otp" id="otp" value="" placeholder=" ओ. टी. पी." required="" aria-required="true">
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <button type="button" id="confirm_otp" class="btn btn-submit mt-4">दाखल करा</button>
+                </div>
+            </div>
+
+            <div class="row pt-3 moredatadiv">
+                
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label>राज्य<span style="color:red">*</span>
+                    </label>
+                    <input type="text" id="state" name="state" required="" class="form-control form-control-line disable_inp  " placeholder="State" value="Maharashtra" readonly="" disabled="disabled" aria-required="true">                                       
+                </div>
+
+
+                    <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3 dist_div_1" style="display: none;">
+                        <label for="district">जिल्हा</label><span style="color:red">*</span>
+                        <select name="district" id="district" class="form-control select2 select2-hidden-accessible" required="" data-select2-id="district" tabindex="-1" aria-hidden="true" aria-required="true">
+                           
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-district-container"><span class="select2-selection__rendered" id="select2-district-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3 dist_div_1" style="display: none;">
+                        <label for="taluka">तालुका</label><span style="color:red">*</span>
+                        <select class="form-control select2 select2-hidden-accessible" id="taluka" name="taluka" required="" data-select2-id="taluka" tabindex="-1" aria-hidden="true" aria-required="true">
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="2" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-taluka-container"><span class="select2-selection__rendered" id="select2-taluka-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3 dist_div_1" style="display: none;">
+                        <label for="village">गाव</label><span style="color:red">*</span>
+                        <select class="form-control select2 select2-hidden-accessible" id="village" name="village" required="" data-select2-id="village" tabindex="-1" aria-hidden="true" aria-required="true">
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="3" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-village-container"><span class="select2-selection__rendered" id="select2-village-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+
+
+
+                    <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3 dist_div_2" style="display: block;">
+                        <label for="district">जिल्हा</label><span style="color:red">*</span>
+                        <select name="districts" id="districts" class="form-control select2 dists select2-hidden-accessible" required="" data-select2-id="districts" tabindex="-1" aria-hidden="true" aria-required="true">
+                           
+                        <option value="" disabled="" selected="" data-select2-id="7">Select District</option><option value="15">Ahmednagar</option><option value="16">Akola</option><option value="2">Amravati</option><option value="17">Beed</option><option value="18">Bhandara</option><option value="19">Buldhana</option><option value="20">Chandrapur</option><option value="9">Chhatrapati Sambhajinagar</option><option value="29">Dharashiv</option><option value="10">Dhule</option><option value="1">Gadchiroli</option><option value="21">Gondia</option><option value="22">Hingoli</option><option value="23">Jalgaon</option><option value="24">Jalna</option><option value="25">Kolhapur</option><option value="26">Latur</option><option value="14">Mumbai</option><option value="41">Mumbai Suburban</option><option value="28">Nagpur</option><option value="27">Nanded</option><option value="3">Nandurbar</option><option value="11">Nashik</option><option value="36">Palghar</option><option value="30">Parbhani</option><option value="4">Pune</option><option value="31">Raigad</option><option value="6">Ratnagiri</option><option value="40">Sangli</option><option value="38">Satara</option><option value="32">Sindhudurg</option><option value="33">Solapur</option><option value="7">Thane</option><option value="34">Wardha</option><option value="35">Washim</option><option value="8">Yavatmal</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="4" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-districts-container"><span class="select2-selection__rendered" id="select2-districts-container" role="textbox" aria-readonly="true" title="Select District">Select District</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3 dist_div_2" style="display: block;">
+                        <label for="taluka">तालुका</label><span style="color:red">*</span>
+                        <select class="form-control select2 tals select2-hidden-accessible" id="talukas" name="talukas" required="" data-select2-id="talukas" tabindex="-1" aria-hidden="true" aria-required="true">
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="5" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-talukas-container"><span class="select2-selection__rendered" id="select2-talukas-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3 dist_div_2" style="display: block;">
+                        <label for="village">गाव</label><span style="color:red">*</span>
+                        <select class="form-control select2 select2-hidden-accessible" id="villages" name="villages" required="" data-select2-id="villages" tabindex="-1" aria-hidden="true" aria-required="true">
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="6" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-villages-container"><span class="select2-selection__rendered" id="select2-villages-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+
+
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label>आधार कार्ड क्रमांक<span style="color:red">*</span>
+                    </label>
+                    <input type="text" id="aadhar_no" name="aadhar_no" required="" minlength="12" maxlength="12" class="form-control num form-control-line " placeholder="आधार कार्ड क्रमांक" value="" aria-required="true">                                       
+                </div>
+                
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label>लिंग<span style="color:red">*</span>
+                    </label>
+                     <select name="gender" id="gender" required="" class="form-control form-control-line" placeholder="लिंग" aria-required="true">
+                        <option value="">--Select Option--</option>
+                        <option value="Male">Male (पुरुष)</option>
+                        <option value="Female">Female (स्त्री)</option>
+                        <option value="Other">Other (इतर)</option>
+                    </select> 
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="email">ई - मेल आयडी</label>
+                    <input type="email" class="form-control" name="email" id="email" value="" placeholder=" ई - मेल आयडी">
+                
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <button type="button" id="submit_appln" class="btn btn-submit mt-4">अर्ज दाखल करा                    </button>
+                </div>
+            </div>
+
+            <div class="row" id="notpaid" style="display: none;">
+                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex ">
+                    
+                    <div class="col-sm-8 col-md-8 pt-3">
+                        <h3 class="benf_titile"><label>महाराष्ट्र ऊर्जा विकास अभिकरण (महाऊर्जा) - पीएम कुसुम योजनेसाठी आधीच नोंदणी केली आहे? </label><span style="color:red">*</span></h3>
+                        <div class="col-sm-12 col-md-12 d-flex p-0">
+                            <div class="col-sm-1 col-md-1 p-0">
+                                <label for="yes" class="radio-inline">
+                                <input type="radio" class=" pmkusum mx-1" name="pmkusum" id="yes" value="yes">Yes</label>
+                            </div>
+                            <div class="col-sm-2 col-md-2">
+                                <label for="no" class="radio-inline">
+                                    <input type="radio" class="mx-1 pmkusum" name="pmkusum" id="no" value="no"><label for="no">No</label>
+                            </label></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="kusumdiv" style="display: none;">
+                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex ">
+                    
+                    <div class="col-sm-4 col-md-4">
+                        <label for="application_no">अर्ज क्रमांक</label><span style="color:red">*</span>
+                        <input type="text" class="form-control" name="application_no" id="application_no" value="" minlength="8" maxlength="15" placeholder="अर्ज क्रमांक" required="" aria-required="true">
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <button type="button" id="kusum_search_btn" class="btn btn-submit mt-4">शोधा</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-5 kusumdatadiv" id="kusumdatadiv" style="display:none;">
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="kusum_application_no">अर्ज क्रमांक</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="kusum_application_no" id="kusum_application_no" value="" placeholder=" अर्ज क्रमांक" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="kusum_benf_name">लाभार्थ्याचे नाव</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="kusum_benf_name" id="kusum_benf_name" value="" placeholder="लाभार्थ्याचे नाव" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3" style="display:none;">
+                    <label for="kusum_aadhar_no">आधार कार्ड क्रमांक</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="kusum_aadhar_no" id="kusum_aadhar_no" value="" placeholder="आधार कार्ड क्रमांक" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3" style="display:none;">
+                    <label for="kusum_mobile_no">भ्रमणध्वनी क्रमांक</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="kusum_mobile_no" id="kusum_mobile_no" value="" placeholder="भ्रमणध्वनी क्रमांक" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="kusum_caste_category">जात वर्गवारी</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="kusum_caste_category" id="kusum_caste_category" value="" placeholder="जात वर्गवारी" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="kusum_pump_required">पंप क्षमता</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="kusum_pump_required" id="kusum_pump_required" value="" placeholder="पंप क्षमता" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="kusum_district">जिल्हा</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="kusum_district" id="kusum_district" value="" placeholder="जिल्हा" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="kusum_taluka">तालुका</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="kusum_taluka" id="kusum_taluka" value="" placeholder="तालुका" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="kusum_village">गाव</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="kusum_village" id="kusum_village" value="" placeholder="गाव" required="" readonly="" aria-required="true">
+                </div>
+                <div class="col-sm-3 col-md-3 col-xl-3 col-lg-3">
+                    <label for="kusum_application_status">अर्जाची सद्यस्थिती</label><span style="color:red">*</span>
+                    <input type="text" class="form-control" name="kusum_application_status" id="kusum_application_status" value="" placeholder="अर्जाची सद्यस्थिती" required="" readonly="" aria-required="true">
+                </div>
+                
+                <div class="col-sm-12 col-md-12 col-xl-12 col-lg-12">
+  
+                    <div class="p-3 text-center"><h4 class="text-danger" id="kusum_application_desc"></h4></div>
+                </div>
+
+            </div>
+         </form>
