@@ -1,3 +1,160 @@
+$("#app_search_btn2").click(function(){
+        load_image();
+        var response = {"status":"success","msg":"","data":{"id":"122260","consumer_no":"585440453966","sub_division_name":null,"bu":"2593","circle_name":null,"circle_code":"617","village_code":"58544","consumer_name":"Rushikesh Haribhau Vagare","address":"Gat NO 283, kshetra 01 he 50 r, Mogra, MANJLEGAON, 431131","consumer_current_status":null,"load_in_hp":"5.0","cast_category":"Open","total_receipt_amount":"11643.00","first_sd_receipt_amt":null,"agreement_fees_receipt_amt":null,"service_connection_chrgs_amt":null,"processing_fees_amt":null,"supervision_charges_amt":null,"goods_service_tax_receipt_amt":"1433.00","ddf_receipt_amt":null,"other_charges_amt":null,"receipt_number":null,"receipt_dt":"20-MAR-2024","mobile":"9834959080","aadhar_no":null,"distance_from_lt_line":"150","distance_from_ht_line":null,"benf_id":null,"otp":null,"is_active":"1","is_delete":"0","added_date":"2024-03-30 17:29:47","rejected_remark":null,"rejected_date":null,"census_code":"559365","updated_status_msedcl":"0","updated_status_msedcl_date":null,"updated_status_msedcl_desc":null,"is_watersheds":0,"village":[],"taluka":[],"district":[],"districts":[{"id":"15","name":"Ahmednagar"},{"id":"16","name":"Akola"},{"id":"2","name":"Amravati"},{"id":"17","name":"Beed"},{"id":"18","name":"Bhandara"},{"id":"19","name":"Buldhana"},{"id":"20","name":"Chandrapur"},{"id":"9","name":"Chhatrapati Sambhajinagar"},{"id":"29","name":"Dharashiv"},{"id":"10","name":"Dhule"},{"id":"1","name":"Gadchiroli"},{"id":"21","name":"Gondia"},{"id":"22","name":"Hingoli"},{"id":"23","name":"Jalgaon"},{"id":"24","name":"Jalna"},{"id":"25","name":"Kolhapur"},{"id":"26","name":"Latur"},{"id":"14","name":"Mumbai"},{"id":"41","name":"Mumbai Suburban"},{"id":"28","name":"Nagpur"},{"id":"27","name":"Nanded"},{"id":"3","name":"Nandurbar"},{"id":"11","name":"Nashik"},{"id":"36","name":"Palghar"},{"id":"30","name":"Parbhani"},{"id":"4","name":"Pune"},{"id":"31","name":"Raigad"},{"id":"6","name":"Ratnagiri"},{"id":"40","name":"Sangli"},{"id":"38","name":"Satara"},{"id":"32","name":"Sindhudurg"},{"id":"33","name":"Solapur"},{"id":"7","name":"Thane"},{"id":"34","name":"Wardha"},{"id":"35","name":"Washim"},{"id":"8","name":"Yavatmal"}]}};
+        unload_image();
+        console.log(response.status);
+      if (response.status == 'error') {  
+         swal("", response.msg, "error");
+         return false;       
+      }else if (response.msg != '') {  
+         swal("", response.msg, "success");
+         if(response.data.is_watersheds == 1){
+             $("#is_ext_user").val("Yes").change();
+             $("#is_ext_user").prop("disabled", true); 
+             $(".d_ext_pmp_typ").show();  
+             $(".d_ext_pmp_sbtyp").show(); 
+             $(".d_ext_pmp_cp").show();
+             $(".d_ext_src_pow").show();
+             $(".d_ext_eff_pmp").show();   
+             $(".d_ext_anu_dsl").show();
+             $("#ext_src_pow").val('');
+             
+             $("#ext_pmp_typ").removeAttr("disabled");  
+             $("#ext_pmp_sbtyp").removeAttr("disabled"); 
+             $("#ext_pmp_cp").removeAttr("disabled");
+
+             $("#ext_src_pow").removeAttr("disabled");
+             $("#ext_eff_pmp").removeAttr("disabled");   
+             $("#ext_anu_dsl").removeAttr("disabled");
+         }
+         $("#app_search_btn").css("display","none");
+          $("#consumerdatadiv").css("display","flex");
+          $("#confirm_btn").show();
+          $("#sub_division_name").val(response.data.sub_division_name);
+          $("#bu").val(response.data.bu);
+          $("#circle_name").val(response.data.circle_name);
+          $("#circle_id").val(response.data.circle_code);
+          $("#village_code").val(response.data.village_code);
+          $("#consumer_name").val(response.data.consumer_name);
+          $("#address").val(response.data.address);
+          $("#load_in_hp").val(response.data.load_in_hp);
+          $("#total_receipt_amount").val(response.data.total_receipt_amount);
+          $("#receipt_number").val(response.data.receipt_number);
+          $("#receipt_dt").val(response.data.receipt_dt);
+          //$("#mobile").val(response.data.mobile);
+          $("#aadhar_no1").val(response.data.aadhar_no);
+          $("#distance_from_lt_line").val(response.data.distance_from_lt_line);
+          $("#distance_from_ht_line").val(response.data.distance_from_ht_line);
+          // $("#cast_category").val(response.data.cast_category);
+          //$("#district").val(response.data.district_id);
+          //$("#taluka").val(response.data.taluka_id);
+          // $("#village").val(response.data.village_id);
+          //$("#district_name").val(response.data.district_name);
+          //$("#taluka_name").val(response.data.taluka_name);
+          // $("#village_name").val(response.data.village_name);
+          // alert(response.data.district.length +'-'+ response.data.districts.length);
+          if(response.data.district.length === 0){
+             $(".dist_div_1").css("display","none");
+             $(".dist_div_2").css("display","block");
+             var district = response.data.districts;
+             districtHtml = '<option value="" disabled selected>Select District</option>';
+              $.each(district, function (key, value) {
+                 districtHtml += '<option value="' + value.id + '" >' + value.name + '</option>';
+              });
+              $('#districts').append(districtHtml);
+          }
+          else{
+             $(".dist_div_2").css("display","none");
+             $(".dist_div_1").css("display","block");
+             villageHtml = '<option value="" disabled selected>Select Village</option>';
+              var village = response.data.village;
+              $.each(village, function (key, value) {
+                 villageHtml += '<option value="' + value.village_id + '" >' + value.village + '</option>';
+              });
+              $('#village').append(villageHtml);
+
+              talukaHtml = '<option value="" disabled selected>Select Taluka</option>';
+              var taluka = response.data.taluka;
+              $.each(taluka, function (key, value) {
+                 talukaHtml += '<option value="' + value.taluka_id + '" >' + value.taluka + '</option>';
+              });
+              $('#taluka').append(talukaHtml);
+
+              districtHtml = '<option value="" disabled selected>Select District</option>';
+              var district = response.data.district;
+              $.each(district, function (key, value) {
+                 districtHtml += '<option value="' + value.id + '" >' + value.name + '</option>';
+              });
+              $('#district').append(districtHtml);
+             
+          }
+          
+     } else {
+          $("#app_search_btn").css("display","none");
+          $("#consumerdatadiv").css("display","flex");
+          $("#confirm_btn").show();
+          $("#sub_division_name").val(response.data.sub_division_name);
+          $("#bu").val(response.data.bu);
+          $("#circle_name").val(response.data.circle_name);
+          $("#circle_id").val(response.data.circle_code);
+          $("#village_code").val(response.data.village_code);
+          $("#consumer_name").val(response.data.consumer_name);
+          $("#address").val(response.data.address);
+          $("#load_in_hp").val(response.data.load_in_hp);
+          $("#total_receipt_amount").val(response.data.total_receipt_amount);
+          $("#receipt_number").val(response.data.receipt_number);
+          $("#receipt_dt").val(response.data.receipt_dt);
+          //$("#mobile").val(response.data.mobile);
+          $("#aadhar_no1").val(response.data.aadhar_no);
+          $("#distance_from_lt_line").val(response.data.distance_from_lt_line);
+          $("#distance_from_ht_line").val(response.data.distance_from_ht_line);
+          // $("#cast_category").val(response.data.cast_category);
+          // $("#district").val(response.data.district_id);
+          // $("#taluka").val(response.data.taluka_id);
+          // $("#village").val(response.data.village_id);
+          // $("#district_name").val(response.data.district_name);
+          // $("#taluka_name").val(response.data.taluka_name);
+          // $("#village_name").val(response.data.village_name);
+          // alert(response.data.district.length +'-'+ response.data.districts.length);
+           if(response.data.district.length === 0){
+             $(".dist_div_1").css("display","none");
+             $(".dist_div_2").css("display","block");
+             districtHtml = '<option value="" disabled selected>Select District</option>';
+             var district = response.data.districts;
+              $.each(district, function (key, value) {
+                 districtHtml += '<option value="' + value.id + '" >' + value.name + '</option>';
+              });
+              $('#districts').append(districtHtml);
+          }
+          else{
+             $(".dist_div_2").css("display","none");
+             $(".dist_div_1").css("display","block");
+             villageHtml = '<option value="" disabled selected>Select Village</option>';
+              var village = response.data.village;
+              $.each(village, function (key, value) {
+                 villageHtml += '<option value="' + value.village_id + '" >' + value.village + '</option>';
+              });
+              $('#village').append(villageHtml);
+
+              talukaHtml = '<option value="" disabled selected>Select Taluka</option>';
+              var taluka = response.data.taluka;
+              $.each(taluka, function (key, value) {
+                 talukaHtml += '<option value="' + value.taluka_id + '" >' + value.taluka + '</option>';
+              });
+              $('#taluka').append(talukaHtml);
+
+              districtHtml = '<option value="" disabled selected>Select District</option>';
+              var district = response.data.district;
+              $.each(district, function (key, value) {
+                 districtHtml += '<option value="' + value.id + '" >' + value.name + '</option>';
+              });
+              $('#district').append(districtHtml);
+             
+          }
+     }
+});
+
+
 
 {"status":"success","msg":"","data":{"id":"122260","consumer_no":"585440453927","sub_division_name":null,"bu":"2593","circle_name":null,"circle_code":"617","village_code":"58544","consumer_name":"Rushikesh Haribhau Vagare","address":"Gat NO 283, kshetra 01 he 50 r, Mogra, MANJLEGAON, 431131","consumer_current_status":null,"load_in_hp":"5.0","cast_category":"Open","total_receipt_amount":"11643.00","first_sd_receipt_amt":null,"agreement_fees_receipt_amt":null,"service_connection_chrgs_amt":null,"processing_fees_amt":null,"supervision_charges_amt":null,"goods_service_tax_receipt_amt":"1433.00","ddf_receipt_amt":null,"other_charges_amt":null,"receipt_number":null,"receipt_dt":"20-MAR-2024","mobile":"9834959080","aadhar_no":null,"distance_from_lt_line":"150","distance_from_ht_line":null,"benf_id":null,"otp":null,"is_active":"1","is_delete":"0","added_date":"2024-03-30 17:29:47","rejected_remark":null,"rejected_date":null,"census_code":"559365","updated_status_msedcl":"0","updated_status_msedcl_date":null,"updated_status_msedcl_desc":null,"is_watersheds":0,"village":[],"taluka":[],"district":[],"districts":[{"id":"15","name":"Ahmednagar"},{"id":"16","name":"Akola"},{"id":"2","name":"Amravati"},{"id":"17","name":"Beed"},{"id":"18","name":"Bhandara"},{"id":"19","name":"Buldhana"},{"id":"20","name":"Chandrapur"},{"id":"9","name":"Chhatrapati Sambhajinagar"},{"id":"29","name":"Dharashiv"},{"id":"10","name":"Dhule"},{"id":"1","name":"Gadchiroli"},{"id":"21","name":"Gondia"},{"id":"22","name":"Hingoli"},{"id":"23","name":"Jalgaon"},{"id":"24","name":"Jalna"},{"id":"25","name":"Kolhapur"},{"id":"26","name":"Latur"},{"id":"14","name":"Mumbai"},{"id":"41","name":"Mumbai Suburban"},{"id":"28","name":"Nagpur"},{"id":"27","name":"Nanded"},{"id":"3","name":"Nandurbar"},{"id":"11","name":"Nashik"},{"id":"36","name":"Palghar"},{"id":"30","name":"Parbhani"},{"id":"4","name":"Pune"},{"id":"31","name":"Raigad"},{"id":"6","name":"Ratnagiri"},{"id":"40","name":"Sangli"},{"id":"38","name":"Satara"},{"id":"32","name":"Sindhudurg"},{"id":"33","name":"Solapur"},{"id":"7","name":"Thane"},{"id":"34","name":"Wardha"},{"id":"35","name":"Washim"},{"id":"8","name":"Yavatmal"}]}}
 
