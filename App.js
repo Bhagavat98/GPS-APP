@@ -1,17 +1,14 @@
-am not able to new claim medical insurance reimbursement for medical when i click on next button there are not responding. upload document options also not showing on portal. please find attached screenshot for your reference
+chetan.patil@mahindraholidays.com
+gurpreet.panesar@mahindraholidays.com
+bhagavat.solanke550@mahindraholidays.com
 
-https://meet.google.com/rms-yupj-oih?hs=224
+Request for Work from Home for Medical Recovery
 
+Hi Chetan Sir and Gurpreet Sir,
 
+     As you know I had met with an major accident last year due to which a surgery was required to fix the plate in my right hand as it was totally damaged ,as per doctors suggestion I am not allowed to drive or lift heavy objects until the plate is removed,  so I kindly request you to give me some time to work from home till February/10/2025. 
 
-https://apps.randstad.in/ourpeople/
+Please find the attached surgery reports for your reference.
 
-प्रधानमंत्री कुसुम घटक-ब योजनेअंतर्गत सौर कृषिपंप करिता आपल्या अर्जाची माहिती https://kusumbenef.mahadiscom.in/benef_home या लिंकवर लॉगइन करून पूर्ण भरावी. धन्यवाद.महावितरण
-नोंदणी झालेल्या अर्जाची माहिती खालील प्रमाणे,
-Application No.: MS230518432 , Username: MS230518432 , Password: 9139
-
-<div class="btn_brnf">
-  <a class="btn btn-sm btn-outline-primary" target="_blank" onclick="printTapshil1(9,18432)">
-    <i class="fa fa-file" aria-hidden="true"></i>&nbsp;कोटेशन
-  </a>
-</div>
+Thanks & Regards
+Bhagavat Solanke
